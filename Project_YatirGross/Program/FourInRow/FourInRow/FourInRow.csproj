@@ -1,0 +1,324 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{DDB1B621-3006-41C9-B950-E98C7CEEB890}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>FourInRow</RootNamespace>
+    <AssemblyName>FourInRow</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Windows.Forms.DataVisualization" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="DataSetCities.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DataSetCities.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="DataSetGames.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DataSetGames.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="DataSetGameSteps.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DataSetGameSteps.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="DataSetPlayers.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DataSetPlayers.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="FormAddCity.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormAddCity.Designer.cs">
+      <DependentUpon>FormAddCity.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormAddGame.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormAddGame.Designer.cs">
+      <DependentUpon>FormAddGame.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormAddPlayer.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormAddPlayer.Designer.cs">
+      <DependentUpon>FormAddPlayer.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormAddStep.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormAddStep.Designer.cs">
+      <DependentUpon>FormAddStep.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormChartGamesAndPlayers.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormChartGamesAndPlayers.Designer.cs">
+      <DependentUpon>FormChartGamesAndPlayers.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormCities.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormCities.Designer.cs">
+      <DependentUpon>FormCities.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormGames.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormGames.Designer.cs">
+      <DependentUpon>FormGames.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormGameSteps.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormGameSteps.Designer.cs">
+      <DependentUpon>FormGameSteps.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormGameOnePlayer.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormGameOnePlayer.Designer.cs">
+      <DependentUpon>FormGameOnePlayer.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormGameTwoPlayers.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormGameTwoPlayers.Designer.cs">
+      <DependentUpon>FormGameTwoPlayers.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormLogin.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormLogin.Designer.cs">
+      <DependentUpon>FormLogin.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormMenu.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormMenu.Designer.cs">
+      <DependentUpon>FormMenu.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormPlayers.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormPlayers.Designer.cs">
+      <DependentUpon>FormPlayers.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormRptGamesByDate.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormRptGamesByDate.Designer.cs">
+      <DependentUpon>FormRptGamesByDate.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormRptGamesOfPlayer.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormRptGamesOfPlayer.Designer.cs">
+      <DependentUpon>FormRptGamesOfPlayer.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormRptStepsInGame.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormRptStepsInGame.Designer.cs">
+      <DependentUpon>FormRptStepsInGame.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormUpdateGame.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormUpdateGame.Designer.cs">
+      <DependentUpon>FormUpdateGame.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormUpdateGameStep.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormUpdateGameStep.Designer.cs">
+      <DependentUpon>FormUpdateGameStep.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormUpdatePlayer.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormUpdatePlayer.Designer.cs">
+      <DependentUpon>FormUpdatePlayer.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormViewGame.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormViewGame.Designer.cs">
+      <DependentUpon>FormViewGame.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="FormAddCity.resx">
+      <DependentUpon>FormAddCity.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormAddGame.resx">
+      <DependentUpon>FormAddGame.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormAddPlayer.resx">
+      <DependentUpon>FormAddPlayer.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormAddStep.resx">
+      <DependentUpon>FormAddStep.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormChartGamesAndPlayers.resx">
+      <DependentUpon>FormChartGamesAndPlayers.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormCities.resx">
+      <DependentUpon>FormCities.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormGames.resx">
+      <DependentUpon>FormGames.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormGameSteps.resx">
+      <DependentUpon>FormGameSteps.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormGameOnePlayer.resx">
+      <DependentUpon>FormGameOnePlayer.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormGameTwoPlayers.resx">
+      <DependentUpon>FormGameTwoPlayers.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormLogin.resx">
+      <DependentUpon>FormLogin.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormMenu.resx">
+      <DependentUpon>FormMenu.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormPlayers.resx">
+      <DependentUpon>FormPlayers.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormRptGamesByDate.resx">
+      <DependentUpon>FormRptGamesByDate.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormRptGamesOfPlayer.resx">
+      <DependentUpon>FormRptGamesOfPlayer.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormRptStepsInGame.resx">
+      <DependentUpon>FormRptStepsInGame.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormUpdateGame.resx">
+      <DependentUpon>FormUpdateGame.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormUpdateGameStep.resx">
+      <DependentUpon>FormUpdateGameStep.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormUpdatePlayer.resx">
+      <DependentUpon>FormUpdatePlayer.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormViewGame.resx">
+      <DependentUpon>FormViewGame.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <None Include="DataSetCities.xsc">
+      <DependentUpon>DataSetCities.xsd</DependentUpon>
+    </None>
+    <None Include="DataSetCities.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>DataSetCities.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="DataSetCities.xss">
+      <DependentUpon>DataSetCities.xsd</DependentUpon>
+    </None>
+    <None Include="DataSetGames.xsc">
+      <DependentUpon>DataSetGames.xsd</DependentUpon>
+    </None>
+    <None Include="DataSetGames.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>DataSetGames.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="DataSetGames.xss">
+      <DependentUpon>DataSetGames.xsd</DependentUpon>
+    </None>
+    <None Include="DataSetGameSteps.xsc">
+      <DependentUpon>DataSetGameSteps.xsd</DependentUpon>
+    </None>
+    <None Include="DataSetGameSteps.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>DataSetGameSteps.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="DataSetGameSteps.xss">
+      <DependentUpon>DataSetGameSteps.xsd</DependentUpon>
+    </None>
+    <None Include="DataSetPlayers.xsc">
+      <DependentUpon>DataSetPlayers.xsd</DependentUpon>
+    </None>
+    <None Include="DataSetPlayers.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>DataSetPlayers.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="DataSetPlayers.xss">
+      <DependentUpon>DataSetPlayers.xsd</DependentUpon>
+    </None>
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
