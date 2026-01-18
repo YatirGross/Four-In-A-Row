@@ -26,8 +26,8 @@ namespace FourInRow.Properties {
         [global::System.Configuration.ApplicationScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.Configuration.SpecialSettingAttribute(global::System.Configuration.SpecialSetting.ConnectionString)]
-        [global::System.Configuration.DefaultSettingValueAttribute("Provider=Microsoft.ACE.OLEDB.12.0;Data Source=C:\\Projects_2016\\Project_YatirGross" +
-            "\\Access\\dbFourInRow.accdb")]
+        [global::System.Configuration.DefaultSettingValueAttribute("Provider=Microsoft.ACE.OLEDB.12.0;Data Source=|DataDirectory|\\..\\..\\..\\..\\..\\Acc" +
+            "ess\\dbFourInRow.accdb")]
         public string dbFourInRowConnectionString {
             get {
                 return ((string)(this["dbFourInRowConnectionString"]));

@@ -8,6 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Data.OleDb;
+using System.IO;
 
 namespace FourInRow
 {
@@ -24,7 +25,23 @@ namespace FourInRow
             dataConnection = new OleDbConnection();
             try
             {
-                dataConnection.ConnectionString = "Provider=Microsoft.ACE.OLEDB.16.0;Data Source=C:\\Projects_2016\\Project_YatirGross\\Access\\dbFourInRow.accdb";
+                // Get the application's base directory
+                string appPath = AppDomain.CurrentDomain.BaseDirectory;
+                
+                // Navigate up from bin\Debug\ to the project root, then to the database
+                // bin\Debug\ -> bin\ -> FourInRow\ -> FourInRow\ -> Program\ -> Project_YatirGross\ -> Access\
+                string dbPath = Path.Combine(appPath, @"..\..\..\..\..\Access\dbFourInRow.accdb");
+                dbPath = Path.GetFullPath(dbPath); // Resolve relative path to absolute
+                
+                if (!File.Exists(dbPath))
+                {
+                    MessageBox.Show("Database file not found at: " + dbPath + 
+                                  "\n\nPlease ensure the database file exists in the correct location.", 
+                                  "Database Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    return;
+                }
+                
+                dataConnection.ConnectionString = "Provider=Microsoft.ACE.OLEDB.12.0;Data Source=" + dbPath;
                 dataConnection.Open();
             }
             catch(Exception e)
